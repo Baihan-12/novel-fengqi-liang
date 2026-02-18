@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>凤栖梁 - 在线阅读</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <h1>凤栖梁</h1>
+    <p class="subtitle">古代言情 · 宫廷</p>
+  </header>
+
+  <main class="chapter-list">
+    <h2>章节目录</h2>
+    <ul id="chapters"></ul>
+  </main>
+
+  <footer class="site-footer">
+    <p>相府二小姐季嫱因姐姐难产去世被迫入宫为后，与青梅竹马梁王周晔被迫成为叔嫂。冰凌花手帕，能否揭开真相？</p>
+  </footer>
+
+  <script>
+    const chapters = [
+      { file: '第01章-宫宴重逢.md', title: '第1章 宫宴重逢' },
+      { file: '第02章-咫尺天涯.md', title: '第2章 咫尺天涯' },
+      { file: '第03章-姐姐之殇.md', title: '第3章 姐姐之殇' },
+      { file: '第04章-边关书信.md', title: '第4章 边关书信' },
+      { file: '第05章-小公主.md', title: '第5章 小公主' },
+      { file: '第06章-德妃登场.md', title: '第6章 德妃登场' },
+      { file: '第07章-挑拨离间.md', title: '第7章 挑拨离间' },
+      { file: '第08章-流产之痛.md', title: '第8章 流产之痛' },
+      { file: '第09章-旧情泄露.md', title: '第9章 旧情泄露' },
+      { file: '第10章-设局下药.md', title: '第10章 设局下药' },
+      { file: '第11章-意外之夜.md', title: '第11章 意外之夜' },
+      { file: '第12章-嫣儿解围.md', title: '第12章 嫣儿解围' },
+      { file: '第13章-迷雾重重.md', title: '第13章 迷雾重重' },
+      { file: '第14章-有孕在身.md', title: '第14章 有孕在身' },
+      { file: '第15章-混淆视听.md', title: '第15章 混淆视听' },
+      { file: '第16章-龙凤呈祥.md', title: '第16章 龙凤呈祥' },
+      { file: '第17章-姐姐之死.md', title: '第17章 姐姐之死' },
+      { file: '第18章-送子离宫.md', title: '第18章 送子离宫' },
+      { file: '第19章-父子相伴.md', title: '第19章 父子相伴' },
+      { file: '第20章-嫣儿之妒.md', title: '第20章 嫣儿之妒' }
+    ];
+
+    const ul = document.getElementById('chapters');
+    chapters.forEach((ch, i) => {
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.href = `reader.html?ch=${encodeURIComponent(ch.file)}`;
+      a.textContent = ch.title;
+      li.appendChild(a);
+      ul.appendChild(li);
+    });
+  </script>
+</body>
+</html>

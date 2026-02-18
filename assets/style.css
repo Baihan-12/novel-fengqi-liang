@@ -1,0 +1,222 @@
+/* 凤栖梁 - 在线阅读样式 */
+
+:root {
+  --bg: #faf8f5;
+  --bg-card: #fffef9;
+  --text: #2c2416;
+  --text-muted: #6b5d4a;
+  --accent: #8b4513;
+  --accent-light: #c4a574;
+  --border: #e8e0d4;
+  --font-serif: 'Noto Serif SC', 'STSong', 'SimSun', serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 5rem;
+  font-family: var(--font-serif);
+  font-size: 18px;
+  line-height: 1.9;
+  color: var(--text);
+  background: var(--bg);
+  min-height: 100vh;
+}
+
+/* 首页 */
+.site-header {
+  text-align: center;
+  padding: 3rem 1.5rem 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+}
+
+.subtitle {
+  margin: 0.5rem 0 0;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.chapter-list {
+  max-width: 36rem;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.chapter-list h2 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin: 0 0 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.chapter-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.chapter-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.chapter-list li:last-child {
+  border-bottom: none;
+}
+
+.chapter-list a {
+  display: block;
+  padding: 0.5rem 0;
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.chapter-list a:hover {
+  color: var(--accent);
+}
+
+.site-footer {
+  max-width: 36rem;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  text-align: center;
+  line-height: 1.7;
+}
+
+/* 阅读页 */
+.reader-header {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem 0.5rem;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 0.8rem;
+  font-size: 0.9rem;
+  color: var(--accent);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.back-link:hover {
+  opacity: 0.8;
+}
+
+.reader-header h1 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.reader-content {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem 3rem;
+}
+
+.reader-content .loading {
+  color: var(--text-muted);
+  margin: 2rem 0;
+}
+
+.reader-content .content-body {
+  font-size: 1.05rem;
+}
+
+.reader-content .content-body p {
+  margin: 0 0 1.2em;
+  text-indent: 2em;
+}
+
+.reader-content .content-body p:first-child {
+  margin-top: 0;
+}
+
+.reader-content .content-body h1 {
+  font-size: 1.3rem;
+  color: var(--accent);
+  margin: 0 0 1.5rem;
+  font-weight: 600;
+}
+
+.reader-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  background: var(--bg-card);
+  border-top: 1px solid var(--border);
+  box-shadow: 0 -2px 12px rgba(0,0,0,0.04);
+}
+
+.reader-nav .nav-btn {
+  padding: 0.5rem 1.2rem;
+  font-size: 0.95rem;
+  color: var(--accent);
+  text-decoration: none;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.reader-nav .nav-btn:hover {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+.reader-nav .nav-btn[href="#"] {
+  color: var(--text-muted);
+  pointer-events: none;
+  cursor: default;
+}
+
+/* 段落分隔 */
+.reader-content .content-body hr {
+  border: none;
+  height: 1px;
+  background: var(--border);
+  margin: 1.8em 0;
+}
+
+/* 响应式 */
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+
+  .site-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .reader-content {
+    padding: 1rem 1rem 1.5rem;
+  }
+
+  .reader-content .content-body {
+    font-size: 1rem;
+  }
+}
